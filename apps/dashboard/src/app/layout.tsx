@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
-import { Plus_Jakarta_Sans } from "next/font/google";
+import { Azeret_Mono } from "next/font/google";
 import "./globals.css";
 
-const jakarta = Plus_Jakarta_Sans({
+const azeret_mono = Azeret_Mono({
   subsets: ["latin"],
   display: "swap",
-  variable: "--font-jakarta",
+  variable: "--font-azeret_mono",
   weight: ["200", "300", "400", "500", "600", "700", "800"],
 });
 
@@ -57,7 +57,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={jakarta.variable}>
+    <html lang="en" className={azeret_mono.variable}>
       <head>
         <meta httpEquiv="Pragma" content="no-cache" />
         <meta
@@ -66,7 +66,7 @@ export default function RootLayout({
         />
         <link rel="icon" href="/logo.png" type="image/png" />
       </head>
-      <body className="font-jakarta antialiased">{children}</body>
+      <body className="font-azeret_mono antialiased">{children}</body>
     </html>
   );
 }
