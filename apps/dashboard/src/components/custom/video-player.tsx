@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useRef } from "react";
+import { useRef } from "react";
 
 interface VideoPlayerProps {
   videoLink: string;
@@ -10,12 +10,12 @@ interface VideoPlayerProps {
   disableRelatedVideos?: boolean;
 }
 
-const VideoPlayer: React.FC<VideoPlayerProps> = ({
+export default function VideoPlayer({
   videoLink,
   className = "",
   loop = false,
   disableRelatedVideos = false,
-}) => {
+}: VideoPlayerProps) {
   const sectionRef = useRef(null);
 
   let url = videoLink;
@@ -28,7 +28,7 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({
   }
 
   return (
-    <section ref={sectionRef} className="w-full">
+    <section ref={sectionRef} className="w-full max-h-[703px] overflow-hidden">
       <div
         className={`relative aspect-video w-full max-w-[1148px] mx-auto overflow-hidden rounded-[24px] shadow-[inset_-4px_4px_60px_0_rgba(0,0,0,0.5)] ${className}`}
       >
@@ -43,6 +43,4 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({
       </div>
     </section>
   );
-};
-
-export default VideoPlayer;
+}

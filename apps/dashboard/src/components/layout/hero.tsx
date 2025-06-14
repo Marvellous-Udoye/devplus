@@ -8,7 +8,7 @@ export default function Hero() {
           <h1 className="text-white font-medium text-3xl sm:text-4xl md:text-5xl lg:text-[60px] leading-snug sm:leading-tight lg:leading-[72px] tracking-tight mb-6">
             Real-time, customizable debug dashboard for devs
           </h1>
-          <p className="text-base sm:text-lg md:text-xl font-normal leading-relaxed text-[#C1C3C9]">
+          <p className="text-base sm:text-lg md:text-xl font-normal leading-relaxed text-[#C1C3C9] text-balance">
             Devplus is a web extension that provides a real-time, customizable
             debug dashboard for developers. It helps developers debug their apps
             faster and more efficiently.
