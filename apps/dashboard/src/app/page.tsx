@@ -1,6 +1,5 @@
 "use client";
 
-import { motion } from "framer-motion";
 import Ribbon from "@/components/custom/ribbon";
 import Cta from "@/components/layout/cta";
 import Features from "@/components/layout/features";
@@ -8,11 +7,12 @@ import Footer from "@/components/layout/footer";
 import Hero from "@/components/layout/hero";
 import Navbar from "@/components/layout/navbar";
 import UseCases from "@/components/layout/use-cases";
+import { easeOut, motion } from "framer-motion";
 
 const fadeInUp = {
   initial: { opacity: 0, y: 60 },
   whileInView: { opacity: 1, y: 0 },
-  transition: { duration: 0.6, ease: "easeOut" },
+  transition: { duration: 0.6, ease: easeOut },
   viewport: { once: true, margin: "-100px" },
 };
 
@@ -74,7 +74,7 @@ export default function Home() {
       />
 
       <motion.div
-        className="relative z-10 flex flex-col gap-10"
+        className="relative z-20 flex flex-col gap-10"
         variants={staggerContainer}
         initial="initial"
         whileInView="whileInView"
@@ -97,7 +97,7 @@ export default function Home() {
             top: "clamp(-80px, -5vh, -49px)",
             right: "clamp(-250px, -15vw, -208.679px)",
             width: "clamp(300px, 45vw, 490.219px)",
-            height: "clamp(300px, 45vw, 690.219px)",
+            height: "clamp(300px, 45vw, 490.219px)",
             borderRadius: "50%",
             background: "linear-gradient(180deg, #1C9AA8 0%, #4B4FDD 100%)",
             filter: "blur(250px)",
@@ -113,16 +113,27 @@ export default function Home() {
         <motion.div variants={fadeInUp}>
           <Ribbon />
         </motion.div>
-        <motion.div variants={fadeInUp}>
+        <motion.div variants={fadeInUp} className="z-1">
           <Features />
         </motion.div>
       </motion.div>
 
-      <motion.div {...fadeInUp}>
+      <motion.div
+        initial={{ opacity: 0, y: 60 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, ease: easeOut }}
+        viewport={{ once: true, margin: "-100px" }}
+      >
         <Ribbon />
       </motion.div>
 
-      <motion.div {...fadeInUp}>
+      <motion.div
+        initial={{ opacity: 0, y: 60 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, ease: easeOut }}
+        viewport={{ once: true, margin: "-100px" }}
+        className="z-1"
+      >
         <UseCases />
       </motion.div>
 
@@ -186,11 +197,23 @@ export default function Home() {
         />
       </motion.div>
 
-      <motion.div {...fadeInUp}>
+      <motion.div
+        initial={{ opacity: 0, y: 60 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, ease: easeOut }}
+        viewport={{ once: true, margin: "-100px" }}
+        className="z-1"
+      >
         <Cta />
       </motion.div>
 
-      <motion.div {...fadeInUp}>
+      <motion.div
+        initial={{ opacity: 0, y: 60 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, ease: easeOut }}
+        viewport={{ once: true, margin: "-100px" }}
+        className="z-1"
+      >
         <Footer />
       </motion.div>
     </main>

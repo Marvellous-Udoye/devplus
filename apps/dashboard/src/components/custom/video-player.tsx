@@ -29,7 +29,7 @@ export default function VideoPlayer({
           className={`relative aspect-video w-full min-h-[320px] max-w-6xl mx-auto overflow-hidden rounded-2xl shadow-[inset_-4px_4px_60px_0_rgba(0,0,0,0.5)] ${className}`}
         >
           <div className="absolute inset-0 backdrop-blur-lg bg-black/60 flex items-center justify-center z-10">
-            <motion.div className="absolute inset-0 bg-black/80 z-10 pointer-events-none" />
+            <motion.div className="absolute inset-0 bg-black/10 z-10 pointer-events-none" />
 
             <div className="text-center relative z-10 p-4 sm:p-8">
               <motion.div
