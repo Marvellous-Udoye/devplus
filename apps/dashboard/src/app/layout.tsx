@@ -41,7 +41,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://devplus.vercel.app/",
+    url: "https://devsplus.vercel.app/",
     siteName: "DevPlus | Web Extension for Developers",
     title: "DevPlus - Browser Extension for Frontend Developers",
     description:

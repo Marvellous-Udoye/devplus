@@ -61,7 +61,7 @@ export default function Features() {
             className="text-sm sm:text-base font-normal leading-6 text-[#C1C3C9] max-md:text-balance"
             variants={fadeInUp}
           >
-            Devplus is packed with features designed to make debugging easier
+            DevPlus is packed with features designed to make debugging easier
             and more efficient. Explore some of the key capabilities below.
           </motion.p>
         </motion.div>

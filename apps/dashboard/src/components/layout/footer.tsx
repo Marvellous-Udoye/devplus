@@ -83,7 +83,7 @@ export default function Footer() {
             className="text-[#4E9ECB] text-2xl sm:text-3xl font-medium leading-tight tracking-[-0.64px]"
             variants={fadeInUp}
           >
-            Devplus
+            DevPlus
           </motion.h3>
           <motion.p
             className="text-[#C1C3C9] mt-2 mb-6 sm:mb-8 text-sm sm:text-base font-normal leading-6"
@@ -119,7 +119,7 @@ export default function Footer() {
           className="text-[#888B92] text-sm sm:text-base font-medium leading-6"
           variants={fadeInUp}
         >
-          ©{year} Devplus. All rights reserved.
+          ©{year} DevPlus. All rights reserved.
         </motion.p>
       </motion.div>
     </section>

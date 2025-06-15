@@ -86,7 +86,7 @@ export default function Cta() {
             className="text-sm sm:text-base font-normal leading-6 text-[#C1C3C9] max-md:text-balanc"
             variants={fadeInUp}
           >
-            Get started with Devplus - debug with ease.
+            Get started with DevPlus - debug with ease.
           </motion.p>
         </motion.div>
         <motion.div

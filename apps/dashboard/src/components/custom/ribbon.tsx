@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { Box } from "lucide-react";
 import { Fragment } from "react";
 
-const qualities = ["Devplus", "Devplus", "Devplus"];
+const qualities = ["DevPlus", "DevPlus", "DevPlus"];
 
 export default function Ribbon() {
   return (

@@ -49,7 +49,7 @@ export default function UseCases() {
             className="text-sm sm:text-base font-normal leading-6 text-[#C1C3C9] max-md:text-balance max-w-5xl mx-auto md:mx-0"
             variants={itemVariants}
           >
-            Devplus centralizes everything you need right on your dev screen —
+            DevPlus centralizes everything you need right on your dev screen —
             all in one unified overlay, so you can debug smarter and faster.
           </motion.p>
         </motion.div>

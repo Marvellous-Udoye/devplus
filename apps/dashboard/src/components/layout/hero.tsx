@@ -52,7 +52,7 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.7 }}
           >
-            Devplus is a web extension that provides a real-time, customizable
+            DevPlus is a web extension that provides a real-time, customizable
             debug dashboard for developers. It helps developers debug their apps
             faster and more efficiently.
           </motion.p>
