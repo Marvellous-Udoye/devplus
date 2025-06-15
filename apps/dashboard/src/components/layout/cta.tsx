@@ -1,98 +1,95 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { easeInOut, motion, Variants } from "framer-motion";
 import { Button } from "../ui/button";
 
 export default function Cta() {
-  const containerVariants = {
+  const containerVariants: Variants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
       transition: {
         staggerChildren: 0.3,
-        duration: 0.6
-      }
-    }
+        duration: 0.6,
+      },
+    },
   };
 
-  const titleVariants = {
+  const titleVariants: Variants = {
     hidden: { opacity: 0, scale: 0.8 },
     visible: {
       opacity: 1,
       scale: 1,
       transition: {
         duration: 0.8,
-        ease: "easeOut"
-      }
-    }
+        ease: "easeOut",
+      },
+    },
   };
 
-  const fadeInUp = {
+  const fadeInUp: Variants = {
     hidden: { opacity: 0, y: 30 },
     visible: {
       opacity: 1,
       y: 0,
       transition: {
         duration: 0.7,
-        ease: "easeOut"
-      }
-    }
+        ease: "easeOut",
+      },
+    },
   };
 
-  const buttonVariants = {
+  const buttonVariants: Variants = {
     hidden: { opacity: 0, y: 20 },
     visible: {
       opacity: 1,
       y: 0,
       transition: {
         duration: 0.6,
-        ease: "easeOut"
-      }
-    }
+        ease: "easeOut",
+      },
+    },
   };
 
   const buttonHover = {
     scale: 1.05,
     transition: {
       duration: 0.2,
-      ease: "easeInOut"
-    }
+      ease: easeInOut,
+    },
   };
 
   const buttonTap = {
     scale: 0.95,
     transition: {
-      duration: 0.1
-    }
+      duration: 0.1,
+    },
   };
 
   return (
     <section className="py-20 px-4">
-      <motion.div 
+      <motion.div
         className="max-w-[687px] w-full mx-auto flex flex-col gap-10"
         variants={containerVariants}
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.3 }}
       >
-        <motion.div 
-          className="text-center"
-          variants={fadeInUp}
-        >
-          <motion.h3 
+        <motion.div className="text-center" variants={fadeInUp}>
+          <motion.h3
             className="text-white font-medium text-3xl sm:text-4xl md:text-5xl lg:text-7xl leading-snug sm:leading-tight md:leading-16 lg:leading-20 mb-4"
             variants={titleVariants}
           >
             Level Up Debugging
           </motion.h3>
-          <motion.p 
+          <motion.p
             className="text-sm sm:text-base font-normal leading-6 text-[#C1C3C9] max-md:text-balanc"
             variants={fadeInUp}
           >
             Get started with Devplus - debug with ease.
           </motion.p>
         </motion.div>
-        <motion.div 
+        <motion.div
           className="flex items-center justify-center gap-4 sm:gap-8"
           variants={fadeInUp}
         >

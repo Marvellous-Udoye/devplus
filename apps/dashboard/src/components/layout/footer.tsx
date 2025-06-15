@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { easeInOut, motion, Variants } from "framer-motion";
 import { Github, Linkedin, Mail } from "lucide-react";
 import Link from "next/link";
 
@@ -25,7 +25,7 @@ export default function Footer() {
     },
   ];
 
-  const containerVariants = {
+  const containerVariants: Variants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
@@ -36,7 +36,7 @@ export default function Footer() {
     },
   };
 
-  const fadeInUp = {
+  const fadeInUp: Variants = {
     hidden: { opacity: 0, y: 20 },
     visible: {
       opacity: 1,
@@ -48,7 +48,7 @@ export default function Footer() {
     },
   };
 
-  const socialIconVariants = {
+  const socialIconVariants: Variants = {
     hidden: { opacity: 0, scale: 0 },
     visible: {
       opacity: 1,
@@ -65,7 +65,7 @@ export default function Footer() {
     rotate: 5,
     transition: {
       duration: 0.2,
-      ease: "easeInOut",
+      ease: easeInOut,
     },
   };
 
