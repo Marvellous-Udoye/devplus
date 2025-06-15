@@ -67,7 +67,7 @@ export default function Cta() {
   };
 
   return (
-    <section className="py-20 px-4">
+    <section className="max-lg:pt-0 py-20 px-4">
       <motion.div
         className="max-w-[687px] w-full mx-auto flex flex-col gap-10"
         variants={containerVariants}

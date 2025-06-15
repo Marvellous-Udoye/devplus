@@ -76,7 +76,11 @@ export default function UseCases() {
             all in one unified overlay, so you can debug smarter and faster.
           </motion.p>
         </motion.div>
-        <motion.div className="w-full lg:flex-1" variants={itemVariants}>
+
+        <motion.div
+          className="max-w-3xl mx-auto lg:w-full lg:flex-1"
+          variants={itemVariants}
+        >
           <motion.div
             className="relative mb-8 rounded-2xl overflow-hidden bg-gradient-to-br from-slate-800 to-slate-900 border border-white/10"
             variants={itemVariants}

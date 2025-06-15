@@ -23,7 +23,7 @@ export default function Card({
   variant = "feature",
 }: UnifiedCardProps) {
   const isFeatureVariant = variant === "feature";
-  
+
   return (
     <motion.div
       className="bg-white/5 border border-white/10 backdrop-blur-md rounded-xl hover:bg-white/8 transition-all duration-300 group cursor-pointer"
@@ -56,10 +56,10 @@ export default function Card({
             <Icon className="w-4 h-4" />
           </div>
           <div>
-            <h4 className="text-white font-medium text-sm mb-1 group-hover:text-white/90 transition-colors duration-300">
+            <h4 className="text-white font-medium text-sm md:text-base max-md:mb-2 mb-1 group-hover:text-white/90 transition-colors duration-300">
               {title}
             </h4>
-            <p className="text-xs text-[#C1C3C9] leading-relaxed group-hover:text-white/70 transition-colors duration-300">
+            <p className="text-xs font-normal text-[#C1C3C9] leading-relaxed group-hover:text-white/70 transition-colors duration-300">
               {description}
             </p>
           </div>
