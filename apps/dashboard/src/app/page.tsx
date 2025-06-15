@@ -27,7 +27,7 @@ const staggerContainer = {
 
 export default function Home() {
   return (
-    <main className="relative max-w-[1440px] w-full mx-auto flex flex-col gap-10 bg-[#232323] overflow-hidden">
+    <main className="relative max-w-[1780px] w-full mx-auto flex flex-col gap-10 bg-[#232323] overflow-hidden">
       <motion.div
         className="absolute left-[30%] top-[3%] -translate-x-1/2 -translate-y-1/4 pointer-events-none z-0"
         style={{

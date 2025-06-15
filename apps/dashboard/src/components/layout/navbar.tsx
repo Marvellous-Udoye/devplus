@@ -1,10 +1,12 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, useAnimation } from "framer-motion";
 import { Box } from "lucide-react";
 import { Button } from "../ui/button";
 
 export default function Navbar() {
+  const controls = useAnimation();
+
   return (
     <motion.nav
       className="py-4 md:py-6 text-white border-b border-white/0 bg-white/10 backdrop-blur-sm"
@@ -14,13 +16,15 @@ export default function Navbar() {
     >
       <div className="max-w-7xl w-full mx-auto flex items-center justify-between gap-4 px-4">
         <motion.h3
-          className="flex gap-2 items-center text-2xl sm:text-3xl font-medium leading-8 sm:leading-10 tracking-[-0.5px] sm:tracking-[-0.64px]"
+          onHoverStart={() => controls.start({ rotate: 12, scale: 1.1 })}
+          onHoverEnd={() => controls.start({ rotate: -12, scale: 1 })}
+          className="flex gap-2 items-center text-2xl sm:text-3xl font-medium leading-8 sm:leading-10 tracking-[-0.5px] sm:tracking-[-0.64px] cursor-pointer"
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
         >
           <motion.div
-            whileHover={{ rotate: 12, scale: 1.1 }}
+            animate={controls}
             transition={{ type: "spring", stiffness: 300 }}
           >
             <Box size={32} className="-rotate-12" />

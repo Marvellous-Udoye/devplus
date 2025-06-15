@@ -1,6 +1,27 @@
 "use client";
 
 import { motion, Variants } from "framer-motion";
+import { BugPlay, PlugZap, Share2 } from "lucide-react";
+import Card from "../custom/card";
+
+export const extensionFeatures = [
+  {
+    icon: PlugZap,
+    title: "One-Click DevTools",
+    description:
+      "Instantly hook into browser DevTools for faster overlay debugging.",
+  },
+  {
+    icon: BugPlay,
+    title: "Live Debug Mode",
+    description: "Watch and tweak components as they update in real-time.",
+  },
+  {
+    icon: Share2,
+    title: "Unified App Bridge",
+    description: "Sync data across apps with one connected debugging channel.",
+  },
+];
 
 export default function Features() {
   const containerVariants: Variants = {
@@ -55,20 +76,35 @@ export default function Features() {
             className="text-white font-medium text-3xl md:text-4xl lg:text-5xl leading-snug sm:leading-tight lg:leading-[64px] mb-4"
             variants={fadeInUp}
           >
-            Powerful features to streamline your debugging workflow
+            Development-Mode Console That Actually Works
           </motion.h3>
           <motion.p
             className="text-sm sm:text-base font-normal leading-6 text-[#C1C3C9] max-md:text-balance"
             variants={fadeInUp}
           >
-            DevPlus is packed with features designed to make debugging easier
-            and more efficient. Explore some of the key capabilities below.
+            DevPlus activates only in development mode, overlaying a live
+            console that shows React states, network requests, performance
+            timings, and AI-powered debugging assistance.
           </motion.p>
         </motion.div>
-        <motion.div
-          className="max-w-5xl mx-auto"
-          variants={fadeInUp}
-        ></motion.div>
+        <motion.div className="max-w-5xl w-full mx-auto" variants={fadeInUp}>
+          <motion.div
+            className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3"
+            variants={containerVariants}
+          >
+            {extensionFeatures.map(({ icon, title, description }, index) => (
+              <Card
+                key={title}
+                icon={icon}
+                title={title}
+                description={description}
+                variants={fadeInUp}
+                custom={index}
+                variant="feature"
+              />
+            ))}
+          </motion.div>
+        </motion.div>
       </motion.div>
     </section>
   );
