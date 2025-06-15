@@ -14,6 +14,9 @@ export const metadata: Metadata = {
     default: "DevPlus | Developer Extension",
     template: "%s | DevPlus - Web Dev Companion",
   },
+  icons: {
+    icon: "/logo.svg",
+  },
   description:
     "DevPlus is a modern browser extension for frontend developers. It enhances the dev experience by providing real-time insights into React state, console logs, API calls, and more — all in an intuitive overlay UI.",
   keywords: [
