@@ -25,7 +25,7 @@ export default function Hero() {
   return (
     <section>
       <motion.div
-        className="max-w-[1148px] w-full mx-auto flex flex-col gap-14 sm:gap-20 px-4 mb-6 py-10 text-center"
+        className="max-w-[1148px] w-full mx-auto flex flex-col gap-14 sm:gap-20 px-4 mb-6 py-10 sm:text-center"
         variants={containerVariants}
         initial="initial"
         animate="animate"
@@ -42,19 +42,19 @@ export default function Hero() {
               animate={{ opacity: 1 }}
               transition={{ duration: 0.6, delay: 0.5 }}
             >
-              Real-time, customizable debug dashboard for devs
+              Find Bugs Instantly
+              <br className="hidden xl:block" /> With a Visual, Real-Time Debug
+              Panel
             </motion.span>
           </motion.h1>
 
           <motion.p
-            className="text-base sm:text-lg md:text-xl font-normal leading-relaxed text-[#C1C3C9] max-md:text-balance"
+            className="text-base sm:text-lg md:text-xl font-normal leading-relaxed text-[#C1C3C9]"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.7 }}
+            transition={{ duration: 0.6, delay: 0.8 }}
           >
-            DevPlus is a web extension that provides a real-time, customizable
-            debug dashboard for developers. It helps developers debug their apps
-            faster and more efficiently.
+            Real-time overlay that simplify debugging and speed up development
           </motion.p>
         </motion.div>
 

@@ -66,7 +66,7 @@ export default function UseCases() {
             className="text-white font-medium text-3xl md:text-4xl lg:text-5xl leading-snug sm:leading-tight lg:leading-[64px] mb-6 sm:mb-8"
             variants={itemVariants}
           >
-            Say goodbye to tab switching while debugging.{" "}
+            Say goodbye to tab switching while debugging
           </motion.h3>
           <motion.p
             className="text-sm sm:text-base font-normal leading-6 text-[#C1C3C9] max-md:text-balance max-w-5xl mx-auto md:mx-0 mb-8"

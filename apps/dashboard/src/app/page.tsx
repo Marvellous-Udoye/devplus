@@ -62,7 +62,7 @@ export default function Home() {
         className="absolute -left-[30%] top-[15%] -translate-x-1/2 -translate-y-1/4 pointer-events-none z-0"
         style={{
           width: "clamp(250px, 40vw, 450.249px)",
-          height: "clamp(300px, 60vh, 587.072px)",
+          height: "clamp(100px, 10vh, 587.072px)",
           borderRadius: "50%",
           background: "linear-gradient(180deg, #03FBCE 0%, #06FFF0 100%)",
           filter: "blur(177px)",
